@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Модульна контрольна робота
+    </ion-title>
+    <ion-title>
+      Виконав Шкорень Артем КН-31
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-title color="secondary">
+        Середньовічний король вирішив оголосити війну сусідній державі для чого необхідно сформувати своє військо та розрахувати вартість його<br> утримання та швидкість пересування. <br>Після обліку наявних військових одиниць виявилось, що у військо можна записати лицарів у важкій броні(вартість утримання 2 золотих<br> на добу + корм для коней, швидкість пересування 15 км на годину), слонів (вартість утримання корм, швидкість пересування 30 км/ч), піхоти<br> у важкій броні (вартість утримання 1 золотий на добу швидкість 3 км/ч).Необхідно сформувати військо з як мінімум 3 родів військ
+        <br> і розрахувати вартість утримання та швидкість. Результати такого планування необхідно виводити на екран.
+      </ion-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Введіть кількість лицарів у важкій броні:</ion-label>
+        <ion-input type="number" id="heavy" value="2" min="0" step="1" #Inputa></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Введіть кількість слонів:</ion-label>
+        <ion-input type="number" id="elephant" value="4" min="0" step="1" #Inputb></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Введіть кількість піхоти у важкій броні</ion-label>
+        <ion-input type="number" id="footman" value="10" min="0" step="1" #Inputc></ion-input>
+      </ion-item>
+      <ion-button [disabled]="false" expand="block"  fill="outline" (click)="calculate(Inputa.value,Inputb.value,Inputc.value)" >Розрахувати</ion-button>
+      <ion-item>
+        <p>Результат обчислення: </p>
+      </ion-item>
+      <ion-item>Вартість утримання війська: {{maintaince_cost_total}} золотих на день</ion-item>
+      <ion-item>Швидкість війська: {{speed_total}} км/год</ion-item>
+      <ion-title>Діаграма класів:</ion-title>
+      <ion-img src="././assets/module.jpg" style="height: 35%;width: 35%; margin-left:30% ;"></ion-img>
+    </ion-card-content>
+  </ion-card>
+ 
+
+  
+</ion-content>
